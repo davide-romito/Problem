@@ -18,11 +18,10 @@ public class LongestPalindromeSubstring {
 		System.out.println(palindromeString);
 	}
 
-	private String findLongestPalindromeSubstring(String s) {
+	public String findLongestPalindromeSubstring(String s) {
 		for (int i = 1; i < s.length(); i++) {
 			for (int j = 0; j < i; j++) {
-				if (isPalindrome(s.substring(j, s.length() - i + j + 1)
-						.toCharArray())) {
+				if (isPalindrome(s.substring(j, s.length() - i + j + 1))) {
 					return s.substring(j, s.length() - i + j + 1);
 				}
 			}
@@ -30,7 +29,8 @@ public class LongestPalindromeSubstring {
 		return null;
 	}
 
-	private boolean isPalindrome(char[] cArr) {
+	public boolean isPalindrome(String s) {
+		char[] cArr = s.toCharArray();
 		for (int i = 0, j = cArr.length - 1; i < cArr.length / 2; i++, j--) {
 			if (cArr[i] != cArr[j]) {
 				return false;
