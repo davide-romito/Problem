@@ -28,7 +28,7 @@ public class RemoveDuplicates {
 	 * @return a string without duplicate
 	 */
 	public String removeDuplicateCharRecursively(String s, int index) {
-		if (s.length() == 1) {
+		if (s.length() < 2) {
 			return s;
 		}
 		char[] cArr = s.toCharArray();
