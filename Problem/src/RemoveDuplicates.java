@@ -20,14 +20,24 @@ public class RemoveDuplicates {
 		}
 		return sb.toString();
 	}
-
+	
+	
+	/**
+	 * Given a string this method return a string without consecutive character duplicated
+	 * @param s - input string
+	 * @return a string without duplicate
+	 */
+	public String removeDuplicateCharRecursively(String s){
+		return removeDuplicateCharRecursively(s,0);
+	}
+	
 	/**
 	 * Given a string this method return a string without consecutive character duplicated
 	 * @param s - input string
 	 * @param index - index of the starting character. 0 for consider the whole string s
 	 * @return a string without duplicate
 	 */
-	public String removeDuplicateCharRecursively(String s, int index) {
+	private String removeDuplicateCharRecursively(String s, int index) {
 		if (s.length() < 2) {
 			return s;
 		}

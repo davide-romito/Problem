@@ -31,9 +31,9 @@ public class RemoveDuplicatesTest {
 	@Test
 	public void test() {
 		assertEquals(exectedString,	rd.removeDuplicateCharIteratively(stringToTest));
-		assertEquals(exectedString,	rd.removeDuplicateCharRecursively(stringToTest, 0));
+		assertEquals(exectedString,	rd.removeDuplicateCharRecursively(stringToTest));
 		assertEquals(rd.removeDuplicateCharIteratively(stringToTest),
-				rd.removeDuplicateCharRecursively(stringToTest, 0));
+				rd.removeDuplicateCharRecursively(stringToTest));
 	}
 
 }
